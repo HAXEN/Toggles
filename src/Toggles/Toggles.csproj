@@ -5,10 +5,10 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Håkan Alexander</Authors>
     <Company>HAXNET</Company>
-    <Description>Simple implementation of (fature) toggles. Open for new custom implementations of source of managing the values.</Description>
+    <Description>Simple implementation of (feature) toggles. Open for new custom implementations of source of managing the values.</Description>
     <PackageId>Toggles_HAXNET</PackageId>
     <PackageTags>Feature toggles, Toggles</PackageTags>
-    <Version>0.1.0</Version>
+    <Version>0.9.0</Version>
     <RepositoryUrl>https://github.com/HAXEN/Toggles</RepositoryUrl>
   </PropertyGroup>
 
@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
 </Project>
