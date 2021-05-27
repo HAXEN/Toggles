@@ -2,7 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Håkan Alexander</Authors>
+    <Company>HAXNET</Company>
+    <Description>Simple implementation of (fature) toggles. Open for new custom implementations of source of managing the values.</Description>
+    <PackageId>Toggles_HAXNET</PackageId>
+    <PackageTags>Feature toggles, Toggles</PackageTags>
+    <Version>0.1.0</Version>
+    <RepositoryUrl>https://github.com/HAXEN/Toggles</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

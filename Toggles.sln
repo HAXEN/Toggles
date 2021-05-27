@@ -7,7 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toggles", "src\Toggles\Togg
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6B4DC4E6-8499-424F-8282-408071310B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toggles.Tests", "tests\Toggles.Tests\Toggles.Tests.csproj", "{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toggles.Tests", "tests\Toggles.Tests\Toggles.Tests.csproj", "{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{D79B85EC-9879-4DE0-879E-5709F9F5F7E8}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		publish-nuget.cmd = publish-nuget.cmd
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
