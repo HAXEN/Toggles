@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toggles", "src\Toggles\Toggles.csproj", "{A69883BA-7B9F-4875-AFBD-A20B87D00504}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6B4DC4E6-8499-424F-8282-408071310B68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toggles.Tests", "tests\Toggles.Tests\Toggles.Tests.csproj", "{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A69883BA-7B9F-4875-AFBD-A20B87D00504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69883BA-7B9F-4875-AFBD-A20B87D00504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69883BA-7B9F-4875-AFBD-A20B87D00504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69883BA-7B9F-4875-AFBD-A20B87D00504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800} = {6B4DC4E6-8499-424F-8282-408071310B68}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B98A5DB0-D77B-4EC4-935F-D414212B3261}
+	EndGlobalSection
+EndGlobal
