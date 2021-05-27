@@ -11,7 +11,7 @@ using Xunit;
 
 namespace Toggles.Tests.Sources
 {
-    public class ConfigurationSources_Tests
+    public class ConfigurationSource_Tests
     {
 
         [Fact]

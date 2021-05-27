@@ -25,6 +25,11 @@ namespace Toggles.Sources
             }));
         }
 
+        protected void NotifyCompleted()
+        {
+            Observers.ForEach(x => x.OnCompleted());
+        }
+
         private class UnSubscriber : IDisposable
         {
             private readonly List<IObserver<NewToggleValue>> _observers;
