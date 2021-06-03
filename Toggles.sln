@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{D79B85EC
 		publish-nuget.cmd = publish-nuget.cmd
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toggles.Consul", "src\Toggles.Consul\Toggles.Consul.csproj", "{4B950F18-A772-4648-8FC5-3E36BC3CFCE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toggles.Consul.Tests", "tests\Toggles.Consul.Tests\Toggles.Consul.Tests.csproj", "{D77ED26C-1A6D-43C3-BD9A-A1298C04B475}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +33,21 @@ Global
 		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B950F18-A772-4648-8FC5-3E36BC3CFCE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B950F18-A772-4648-8FC5-3E36BC3CFCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B950F18-A772-4648-8FC5-3E36BC3CFCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B950F18-A772-4648-8FC5-3E36BC3CFCE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77ED26C-1A6D-43C3-BD9A-A1298C04B475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77ED26C-1A6D-43C3-BD9A-A1298C04B475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77ED26C-1A6D-43C3-BD9A-A1298C04B475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77ED26C-1A6D-43C3-BD9A-A1298C04B475}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5A4DFA02-CDDE-4CD9-91AB-A673CAA45800} = {6B4DC4E6-8499-424F-8282-408071310B68}
+		{D77ED26C-1A6D-43C3-BD9A-A1298C04B475} = {6B4DC4E6-8499-424F-8282-408071310B68}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B98A5DB0-D77B-4EC4-935F-D414212B3261}

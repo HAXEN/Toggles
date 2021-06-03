@@ -40,7 +40,9 @@ namespace Toggles.Tests
         [Fact]
         public void Should_be_able_to_register_Type()
         {
-            using var provider = _services
+            var services = new ServiceCollection();
+            
+            using var provider = services
                                 .AddToggles(sources => sources
                                     .AddSource<MockedSource>(0))
                                 .BuildServiceProvider();

@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace Toggles.Sources
 {
-    internal class JsonLiveSource : SourceBase, IObserver<JObject>
+    public class JsonLiveSource : SourceBase, IObserver<JObject>
     {
-        private readonly IObservable<JObject> _innerSource;
+        private readonly IInnerLiveSource<JObject> _innerSource;
         private IDisposable _subscription;
         private JObject _currentState;
 
-        public JsonLiveSource(IObservable<JObject> innerSource)
+        public JsonLiveSource(IInnerLiveSource<JObject> innerSource)
         {
             _innerSource = innerSource;
         }
@@ -18,10 +18,12 @@ namespace Toggles.Sources
         public override void Start()
         {
             _subscription = _innerSource.Subscribe(this);
+            _innerSource.Start();
         }
 
         public override void Stop()
         {
+            _innerSource.Stop();
             _subscription?.Dispose();
         }
 

@@ -8,26 +8,6 @@ namespace Toggles.Tests.Sources
 {
     public class JsonLiveSource_Tests
     {
-        public class InnerSourceMock : IObservable<JObject>, IDisposable
-        {
-            private IObserver<JObject> _observer;
-
-            public IDisposable Subscribe(IObserver<JObject> observer)
-            {
-                _observer = observer;
-                return this;
-            }
-
-            public void Dispose()
-            {
-            }
-
-            public void Send(object obj)
-            {
-                _observer.OnNext(JObject.FromObject(obj));
-            }
-        }
-
         [Fact]
         public void Should_not_notify_when_json_is_not_changed()
         {
@@ -83,6 +63,36 @@ namespace Toggles.Tests.Sources
 
             observerMock.Verify(x => x.OnNext(new NewToggleValue{SourceType = typeof(JsonLiveSource), Key = "one", Active = true}));
             observerMock.Verify(x => x.OnNext(new NewToggleValue { SourceType = typeof(JsonLiveSource), Key = "two", Active = false }));
+        }
+
+        public class InnerSourceMock : IInnerLiveSource<JObject>, IDisposable
+        {
+            private IObserver<JObject> _observer;
+
+            public IDisposable Subscribe(IObserver<JObject> observer)
+            {
+                _observer = observer;
+                return this;
+            }
+
+            public void Dispose()
+            {
+            }
+
+            public void Send(object obj)
+            {
+                _observer.OnNext(JObject.FromObject(obj));
+            }
+
+            public void Start()
+            {
+                
+            }
+
+            public void Stop()
+            {
+                
+            }
         }
     }
 }
