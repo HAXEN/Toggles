@@ -35,6 +35,8 @@ namespace Toggles.Impl
         public IEnumerable<(int priority, Type sourceType, IToggleSource sourceInstance)> Sources =>
             _sources.Select(x => (x.priority, x.instance.GetType(), x.instance)).ToArray();
 
+        public IDictionary<string, bool> CurrentStates => _currents.ToDictionary(k => k.Key, v => v.Value.isOn);
+
         public void OnCompleted()
         {
             

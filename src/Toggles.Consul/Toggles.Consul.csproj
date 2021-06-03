@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>0.9.6</Version>
+    <Version>0.9.8</Version>
     <Authors>Håkan Alexander</Authors>
     <Company>HAXEN</Company>
     <Description>Source to fetch features from Consul K/V store</Description>

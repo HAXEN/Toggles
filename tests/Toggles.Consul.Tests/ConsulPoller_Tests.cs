@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Moq;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Toggles.Consul.Tests

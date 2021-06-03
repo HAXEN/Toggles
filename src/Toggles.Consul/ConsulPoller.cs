@@ -67,7 +67,6 @@ namespace Toggles.Consul
             if (!string.IsNullOrEmpty(_settings.Token))
             {
                 _logger.LogDebug($"Setting token ('{_settings.Token}')");
-                //request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _settings.Token);
                 request.Headers.Add("X-Consul-Token", _settings.Token);
             }
 
@@ -77,11 +76,12 @@ namespace Toggles.Consul
         private async Task PollConsul(CancellationToken token)
         {
             ulong lastIndex = 0;
-            var waitBetween = TimeSpan.FromMilliseconds(50);
+            var waitBetween = TimeSpan.Zero;
 
             using var client = CreateClient();
             while (token.IsCancellationRequested == false)
             {
+                await Task.Delay(waitBetween, _cancellationSource.Token).ContinueWith(t => t);
                 try
                 {
                     var request = CreateRequest(lastIndex);
@@ -89,11 +89,18 @@ namespace Toggles.Consul
 
                     if (response.IsSuccessStatusCode)
                     {
+                        ulong responseIndex = 0;
                         if (response.Headers.Contains("X-Consul-Index"))
-                            lastIndex = ulong.Parse(response.Headers.GetValues("X-Consul-Index").First());
+                            responseIndex = ulong.Parse(response.Headers.GetValues("X-Consul-Index").First());
+
+                        if(responseIndex == lastIndex)
+                            continue;
+
+                        lastIndex = responseIndex;
 
                         var responseContent = await response.Content.ReadAsStringAsync(_cancellationSource.Token);
                         var kvResponse = JsonConvert.DeserializeObject<KVResponse[]>(responseContent);
+                        
                         var jsonString = Encoding.UTF8.GetString(Convert.FromBase64String(kvResponse.First().Value));
                         var jObj = JObject.Parse(jsonString);
                         Observers.ForEach(x => x.OnNext(jObj));
@@ -103,19 +110,19 @@ namespace Toggles.Consul
                     {
                         throw new ApplicationException($"Consul returned faulty response. '{response.StatusCode}'");
                     }
-
                 }
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, "Error in ConsulPoller.");
                     Observers.ForEach(x => x.OnError(ex));
+                    if(waitBetween == TimeSpan.Zero)
+                        waitBetween = TimeSpan.FromMilliseconds(50);
 
                     waitBetween = waitBetween * 10;
                     if (waitBetween > TimeSpan.FromMinutes(5))
                         waitBetween = TimeSpan.FromMinutes(5);
                 }
 
-                await Task.Delay(waitBetween, _cancellationSource.Token).ContinueWith(t => t);
             }
         }
     }

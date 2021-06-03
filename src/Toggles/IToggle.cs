@@ -7,5 +7,6 @@ namespace Toggles
     {
         bool IsOn(string key);
         IEnumerable<(int priority, Type sourceType, IToggleSource sourceInstance)> Sources { get; }
+        IDictionary<string, bool> CurrentStates { get; }
     }
 }
