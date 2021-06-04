@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Håkan Alexander</Authors>
-    <Company>HAXNET</Company>
+    <Company>HAXEN</Company>
     <Description>Simple implementation of (feature) toggles. Open for new custom implementations of source of managing the values.</Description>
     <PackageId>Toggles</PackageId>
     <PackageTags>Feature toggles, Toggles</PackageTags>
