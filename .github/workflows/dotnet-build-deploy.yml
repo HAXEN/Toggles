@@ -26,4 +26,4 @@ jobs:
     - name: Pack
       run: dotnet pack --no-build
     - name: Publish
-      run: dotnet nuget push ./home/runner/work/**/release/*.nupkg --api-key ${PACKAGE_TOKEN} --source https://nuget.pkg.github.com/HAXEN/index.json --skip-duplicate
+      run: dotnet nuget push ./home/runner/work/**/release/*.nupkg -s "https://nuget.pkg.github.com/HAXEN/index.json" -k "${PACKAGE_TOKEN}"  --skip-duplicate
