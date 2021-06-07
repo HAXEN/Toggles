@@ -28,4 +28,4 @@ jobs:
     - name: Publish
       run: dotnet nuget push "**/*.nupkg" -s "https://nuget.pkg.github.com/HAXEN/index.json" --api-key ${PACKAGE_TOKEN}  --skip-duplicate
       env: 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PACKAGE_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
