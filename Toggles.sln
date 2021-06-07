@@ -12,7 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{D79B85EC-9879-4DE0-879E-5709F9F5F7E8}"
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
-		publish-nuget.cmd = publish-nuget.cmd
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toggles.Consul", "src\Toggles.Consul\Toggles.Consul.csproj", "{4B950F18-A772-4648-8FC5-3E36BC3CFCE9}"
