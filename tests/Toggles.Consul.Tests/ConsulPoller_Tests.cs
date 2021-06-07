@@ -11,7 +11,7 @@ namespace Toggles.Consul.Tests
 {
     public class ConsulPoller_Tests
     {
-        [Fact]
+        [Fact(Skip = "Need a server and manual work.")]
         public async void Should_call_Consul()
         {
             var observerMock = new Mock<IObserver<JObject>>();

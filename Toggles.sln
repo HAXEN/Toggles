@@ -19,7 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toggles.Consul", "src\Toggl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toggles.Consul.Tests", "tests\Toggles.Consul.Tests\Toggles.Consul.Tests.csproj", "{D77ED26C-1A6D-43C3-BD9A-A1298C04B475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toggles.AspNetCore", "src\Toggles.AspNetCore\Toggles.AspNetCore.csproj", "{D6AF11D5-A683-44BF-8F43-40BE07D208EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toggles.AspNetCore", "src\Toggles.AspNetCore\Toggles.AspNetCore.csproj", "{D6AF11D5-A683-44BF-8F43-40BE07D208EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{C6617C9D-8BC7-42D4-AAA4-4BE56FB77820}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet-build-deploy.yml = .github\workflows\dotnet-build-deploy.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
